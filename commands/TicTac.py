@@ -2,11 +2,8 @@ from typing import List
 from nextcord.ext import commands
 import nextcord
 from nextcord import Interaction, Member
-from dotenv import load_dotenv
 import os
 
-load_dotenv()
-GUILD_ID = int(os.getenv("GUILD_ID"))
 
 class TicTacToeButton(nextcord.ui.Button['TicTacToeView']):
     def __init__(self, x: int, y: int):
@@ -118,7 +115,7 @@ class TicTacToeCog(commands.Cog):
     async def on_ready(self):
         print("TicTacToe is online.")
 
-    @nextcord.slash_command(name="tictactoe", description="Play TicTacToe.",guild_ids=[GUILD_ID])
+    @nextcord.slash_command(name="tictactoe", description="Play TicTacToe.")
     async def tictactoe(self, interaction: Interaction, enemy: Member):
         await interaction.response.send_message(f"Tic Tac Toe: {interaction.user.mention} goes first **X**", view=TicTacToeView())
         global player1, player2
