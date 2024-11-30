@@ -29,7 +29,7 @@ from commands.afk import AFK
 from commands.TicTac import TicTacToeCog
 from commands.calculator import Calculator
 from commands.rps import RPS
-from commands.ImageAi import ImageGenerations
+# from commands.ImageAi import ImageGenerations
 from commands.antiSpma import Antispam
 from commands.censor import Censor
 from commands.ticket import Ticket
@@ -84,7 +84,7 @@ bot.add_cog(Help(bot))
 bot.add_cog(TicTacToeCog(bot))
 bot.add_cog(Calculator(bot))
 bot.add_cog(RPS(bot))
-bot.add_cog(ImageGenerations(bot))
+# bot.add_cog(ImageGenerations(bot))
 bot.add_cog(Antispam(bot))
 bot.add_cog(Censor(bot))
 bot.add_cog(Ticket(bot))

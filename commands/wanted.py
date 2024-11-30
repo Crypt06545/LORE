@@ -3,25 +3,28 @@ from nextcord.ext import commands
 from PIL import Image
 from io import BytesIO
 import aiohttp
+from dotenv import load_dotenv
+import os
+import asyncio  # new added
 
-
-
+load_dotenv()
+GUILD_ID = int(os.getenv("GUILD_ID"))
 
 class ImageCommands(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.session = aiohttp.ClientSession()
+        self.loop = asyncio.get_event_loop()  # ইভেন্ট লুপ নেওয়া
+        self.session = aiohttp.ClientSession(loop=self.loop)  # লুপ পাস করা
 
-    @nextcord.slash_command(name="wanted", description="Show a wanted poster for the specified user")
+    @nextcord.slash_command(name="wanted", description="Show a wanted poster for the specified user", guild_ids=[GUILD_ID])
     async def wanted(self, ctx, user: nextcord.Member = None):
         if user is None:
             user = ctx.user
 
         wanted = Image.open('images/wanted.jpg')
 
-        # Get the user's avatar URL with size (older method)
-        avatar_url = user.avatar.url.replace('.webp', '.png')  # Replace .webp with .png if needed
-        avatar_url = avatar_url + f"?size=128"  # Append size parameter
+        avatar_url = user.avatar.url.replace('.webp', '.png')
+        avatar_url = avatar_url + f"?size=128"
 
         async with self.session.get(avatar_url) as response:
             data = await response.read()
@@ -35,12 +38,12 @@ class ImageCommands(commands.Cog):
         wanted.save(profile_bytes, format='JPEG')
         profile_bytes.seek(0)
 
-        # Send the message and get the message ID
         await ctx.response.send_message(file=nextcord.File(profile_bytes, filename='profile.jpg'))
-        message = await ctx.original_message()  # Fetch the original message
+        message = await ctx.original_message()
 
-        # Add reaction to the message
         await message.add_reaction("🤣")
         await message.add_reaction("😂")
         await message.add_reaction("😭")
 
+def setup(bot):
+    bot.add_cog(ImageCommands(bot))
