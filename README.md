@@ -6,13 +6,13 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.12.3-blue.svg?style=social" alt="Python 3.12.3">
   <img src="https://img.shields.io/badge/nextcord.py-3.0-blue.svg" alt="Nextcord.py">
-  <a href="https://github.com/Crypt06545/LORA"><img src="https://img.shields.io/github/languages/code-size/Crypt06545/LORA" alt="Code Size"></a>
-  <a href="https://github.com/Crypt06545/LORA/commits/main"><img src="https://img.shields.io/github/last-commit/Crypt06545/LORA" alt="Last Commit"></a>
-  <a href="https://github.com/Crypt06545/LORA/stargazers"><img src="https://img.shields.io/github/stars/Crypt06545/LORA" alt="Stars"></a>
-  <a href="https://github.com/Crypt06545/LORA/network/members"><img src="https://img.shields.io/github/forks/Crypt06545/LORA" alt="Forks"></a>
-  <a href="https://github.com/Crypt06545/LORA/contributors"><img src="https://img.shields.io/github/contributors/Crypt06545/LORA" alt="Contributors"></a>
-  <a href="https://github.com/Crypt06545/LORA/issues"><img src="https://img.shields.io/github/issues/Crypt06545/LORA" alt="Issues"></a>
-  <a href="https://github.com/Crypt06545/LORA/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Crypt06545/LORA" alt="License"></a>
+  <a href="https://github.com/Crypt06545/LORE"><img src="https://img.shields.io/github/languages/code-size/Crypt06545/LORE" alt="Code Size"></a>
+  <a href="https://github.com/Crypt06545/LORE/commits/main"><img src="https://img.shields.io/github/last-commit/Crypt06545/LORE" alt="Last Commit"></a>
+  <a href="https://github.com/Crypt06545/LORE/stargazers"><img src="https://img.shields.io/github/stars/Crypt06545/LORE" alt="Stars"></a>
+  <a href="https://github.com/Crypt06545/LORE/network/members"><img src="https://img.shields.io/github/forks/Crypt06545/LORE" alt="Forks"></a>
+  <a href="https://github.com/Crypt06545/LORE/contributors"><img src="https://img.shields.io/github/contributors/Crypt06545/LORE" alt="Contributors"></a>
+  <a href="https://github.com/Crypt06545/LORE/issues"><img src="https://img.shields.io/github/issues/Crypt06545/LORE" alt="Issues"></a>
+  <a href="https://github.com/Crypt06545/LORE/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Crypt06545/LORE" alt="License"></a>
   <br>
 </h1>
 
